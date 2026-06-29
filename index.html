@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+    <!-- Theme buttons (top right corner) -->
+    <div id="theme-switcher">
+        <button class="theme-btn" data-theme="dark">🌙</button>
+        <button class="theme-btn" data-theme="light">☀️</button>
+    </div>
+
+    <!-- Music toggle button (bottom right corner, shown after popup) -->
+    <button id="music-btn" class="hidden">🎵</button>
+
+    <!-- Music selection popup (shown on first load) -->
+    <div id="music-popup">
+        <div class="popup-box">
+            <h2>Welcome to<br>Tic Tac Toe</h2>
+            <p>Pick your vibe — or skip the music</p>
+
+            <div class="track-list">
+                <button class="track-btn" data-track="lofi"><span>🎧</span> Lo-fi Chill</button>
+                <button class="track-btn" data-track="retro"><span>🕹️</span> Retro Arcade</button>
+                <button class="track-btn" data-track="hype"><span>⚡</span> Hype Beats</button>
+                <button class="track-btn" data-track="calm"><span>🌊</span> Calm Vibes</button>
+            </div>
+
+            <div class="music-popup-btns">
+                <button class="btn-primary" id="enter-with-music">Enter with Music</button>
+                <button class="btn-secondary" id="enter-no-music">No Music</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Landing screen -->
+    <section id="landing-screen" class="screen hidden">
+        <p class="subtitle">THREE IN A ROW WINS</p>
+        <h1 class="game-title">TIC <span class="color-o">TAC</span> TOE</h1>
+        <div class="title-marks">
+            <span class="color-x">X</span>
+            <span class="color-o">O</span>
+            <span class="color-x">X</span>
+        </div>
+        <button id="enter-btn" class="btn-primary">Enter Game</button>
+    </section>
+
+    <!-- Name setup screen -->
+    <section id="setup-screen" class="screen hidden">
+        <h2 class="screen-title">Who's Playing?</h2>
+        <div class="setup-form">
+            <div class="name-field">
+                <label>Player 1 <span class="color-x">(X)</span></label>
+                <input type="text" id="name-p1" maxlength="12" placeholder="Enter name">
+            </div>
+            <div class="name-field">
+                <label>Player 2 <span class="color-o">(O)</span></label>
+                <input type="text" id="name-p2" maxlength="12" placeholder="Enter name">
+            </div>
+            <p id="name-error" class="error-text hidden">Please enter both player names.</p>
+            <button id="start-btn" class="btn-primary">Start Game</button>
+        </div>
+    </section>
+
+    <!-- Game screen -->
+    <section id="game-screen" class="screen hidden">
+
+        <!-- Shows whose turn it is -->
+        <div class="turn-info">
+            <span id="turn-mark" class="turn-letter color-x">X</span>
+            <span id="turn-name">Player 1's Turn</span>
+        </div>
+
+        <!-- 3x3 game board -->
+        <div id="board">
+            <button class="cell" data-index="0" disabled></button>
+            <button class="cell" data-index="1" disabled></button>
+            <button class="cell" data-index="2" disabled></button>
+            <button class="cell" data-index="3" disabled></button>
+            <button class="cell" data-index="4" disabled></button>
+            <button class="cell" data-index="5" disabled></button>
+            <button class="cell" data-index="6" disabled></button>
+            <button class="cell" data-index="7" disabled></button>
+            <button class="cell" data-index="8" disabled></button>
+        </div>
+
+        <div class="game-btns">
+            <button id="restart-btn" class="btn-secondary">Restart</button>
+            <button id="new-game-btn" class="btn-secondary">New Game</button>
+            <button id="exit-btn" class="btn-danger">Exit</button>
+        </div>
+    </section>
+
+    <!-- Win / Draw result popup -->
+    <div id="result-popup" class="hidden">
+        <div class="popup-box">
+            <h2 id="result-text"></h2>
+            <button id="play-again-btn" class="btn-primary">Play Again</button>
+            <button id="result-new-game-btn" class="btn-secondary">New Game</button>
+            <button id="result-close-btn" class="btn-danger">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
