@@ -57,22 +57,22 @@ function playSound(name) {
 // (put these files in a music/ folder)
 // =============================================
 
-const musicTracks = {
+/*const musicTracks = {
     lofi:  "music/lofi.mp3",
     retro: "music/retro.mp3",
     hype:  "music/hype.mp3",
     calm:  "music/calm.mp3"
-};
+};*/
 
-const bgMusic    = new Audio();
+const bgMusic    = new Audio("sounds/music.mp3");
 bgMusic.loop     = true;
 bgMusic.volume   = 0.4;
 
-let selectedTrack = "lofi";  // default track
+/*let selectedTrack = "lofi";  // default track*/
 let isMusicOn     = false;
 
 function startMusic() {
-    bgMusic.src = musicTracks[selectedTrack];
+   /* bgMusic.src = musicTracks[selectedTrack];*/
     bgMusic.play().catch(() => {});
     isMusicOn = true;
     updateMusicBtn();
@@ -99,20 +99,9 @@ function updateMusicBtn() {
 // MUSIC POPUP LOGIC
 // =============================================
 
-// Highlight the first track by default
-trackBtns[0].classList.add("selected");
-
-// When a track is clicked, highlight it and save selection
-trackBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        trackBtns.forEach(b => b.classList.remove("selected"));
-        btn.classList.add("selected");
-        selectedTrack = btn.dataset.track;
-    });
-});
-
 // User clicks "Enter with Music"
 enterWithMusic.addEventListener("click", () => {
+    playSound("click");
     musicPopup.classList.add("hidden");
     musicBtn.classList.remove("hidden");
     startMusic();
@@ -121,6 +110,7 @@ enterWithMusic.addEventListener("click", () => {
 
 // User clicks "No Music"
 enterNoMusic.addEventListener("click", () => {
+    playSound("click");
     musicPopup.classList.add("hidden");
     musicBtn.classList.remove("hidden");
     updateMusicBtn();
@@ -129,7 +119,6 @@ enterNoMusic.addEventListener("click", () => {
 
 // Toggle music on/off
 musicBtn.addEventListener("click", () => {
-    if (!selectedTrack) return;
     toggleMusic();
 });
 

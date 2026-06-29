@@ -354,42 +354,6 @@ body {
 }
 .popup-box p { font-size: 13px; color: var(--muted); margin-top: -10px; }
 
-/* Track selection grid */
-.track-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    width: 100%;
-}
-
-.track-btn {
-    padding: 14px 10px;
-    border-radius: 12px;
-    border: 2px solid var(--muted);
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    transition: all 0.2s;
-}
-.track-btn span { font-size: 24px; }
-.track-btn:hover {
-    border-color: var(--color-x);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px var(--glow);
-}
-.track-btn.selected {
-    border-color: var(--color-x);
-    box-shadow: 0 0 12px var(--glow);
-    background: rgba(110, 231, 183, 0.08);
-}
-body.light .track-btn.selected { background: rgba(37, 99, 235, 0.06); }
 
 /* Music popup action buttons */
 .music-popup-btns {
