@@ -228,16 +228,6 @@ This project is a static site and deploys to Netlify with no configuration:
 
 <br>
 
-## Future Improvements
-
-- Single-player mode against a computer opponent
-- Persistent scoreboard across multiple rounds
-- Dark / light theme switcher, saved across visits
-- Full keyboard navigation for accessibility (tabbing through cells, arrow-key movement)
-- Selectable background music tracks
-
-<br>
-<br>
 
 <div align="center">
 
