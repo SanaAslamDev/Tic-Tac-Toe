@@ -4,7 +4,7 @@
 
 <br>
 
-[![View Live Demo](https://img.shields.io/badge/VIEW_LIVE_DEMO-6EE7B7?style=for-the-badge&logo=netlify&logoColor=0f0f13)](https://tictactoe-oxgame.netlify.app/)
+[![View Live Demo](https://img.shields.io/badge/VIEW_LIVE_DEMO-6EE7B7?style=for-the-badge&logo=netlify&logoColor=0f0f13)](tic-tac-toe112.netlify.app)
 
 <br><br>
 
@@ -236,7 +236,7 @@ This project is a static site and deploys to Netlify with no configuration:
 **Sana Aslam**
 
 [![GitHub](https://img.shields.io/badge/GitHub-SanaAslamDev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SanaAslamDev)
-[![Live Project](https://img.shields.io/badge/Live_Project-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://tictactoe-oxgame.netlify.app/)
+[![Live Project](https://img.shields.io/badge/Live_Project-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](tic-tac-toe112.netlify.app)
 
 <br>
 
