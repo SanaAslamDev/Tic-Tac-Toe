@@ -18,7 +18,7 @@
 
 <br>
 
-> A fully themed, two-player Tic Tac Toe game built with **pure HTML, CSS, and JavaScript**. Animated screens, sound effects, optional background music, and a dark/light theme switcher — no frameworks, no build tools, no backend.
+> A fully themed, two-player Tic Tac Toe game built with **pure HTML, CSS, and JavaScript**. Animated screens, sound effects, optional background music, and a cyberpunk-styled UI — no frameworks, no build tools, no backend.
 
 <br>
 
@@ -63,9 +63,8 @@ Tic Tac Toe is a single-page, screen-based browser game for two local players. F
 
 **Setup &amp; Atmosphere**
 - Music selection popup on first load
-- Animated, glowing landing screen
+- Animated, glowing cyberpunk landing screen
 - Player name entry with validation
-- Dark / light theme switcher, saved across visits
 - Floating background music toggle
 
 </td>
@@ -88,13 +87,14 @@ Tic Tac Toe is a single-page, screen-based browser game for two local players. F
 - Result popup on win or draw
 - Restart — same players, fresh board
 - New Game — return to name entry
+- Keyboard shortcuts — `R` to restart, `Esc` to close the result popup
 
 </td>
 <td width="50%">
 
 **Experience**
-- Fully responsive — desktop and mobile
-- Retro arcade title font with clean body typography
+- Fully responsive across desktop, tablet, mobile, and landscape phones
+- Retro-futuristic Orbitron title font with clean Oxanium body typography
 - Smooth, consistent hover and press states
 
 </td>
@@ -118,11 +118,11 @@ Tic Tac Toe is a single-page, screen-based browser game for two local players. F
 | Layer | Technology |
 |:---:|:---:|
 | Structure | HTML5 |
-| Styling | CSS3 — custom properties, keyframe animations |
-| Fonts | Google Fonts — Press Start 2P, Poppins |
+| Styling | CSS3 — custom properties, keyframe animations, fluid `clamp()` sizing |
+| Fonts | Google Fonts — Orbitron, Oxanium |
 | Logic | Vanilla JavaScript |
 | Audio | HTML5 Audio API |
-| Persistence | Browser `localStorage` (theme only) |
+| Persistence | None — each session starts fresh (no `localStorage`/cookies) |
 
 </div>
 
@@ -213,6 +213,7 @@ Then visit `http://localhost:8000`.
 - Eight winning patterns are checked after every move — 3 rows, 3 columns, 2 diagonals
 - A move is rejected if the game has ended or the target cell is already filled
 - A win is detected the instant three matching marks line up on any pattern
+- As soon as a win or draw is detected, the board locks immediately — the short win/draw sound and animation delay before the result popup appears can't be used to sneak in an extra move
 - A draw is detected when the board is full with no winner
 - Turn state alternates strictly between `X` and `O`
 
@@ -231,7 +232,8 @@ This project is a static site and deploys to Netlify with no configuration:
 
 - Single-player mode against a computer opponent
 - Persistent scoreboard across multiple rounds
-- Keyboard navigation for accessibility
+- Dark / light theme switcher, saved across visits
+- Full keyboard navigation for accessibility (tabbing through cells, arrow-key movement)
 - Selectable background music tracks
 
 <br>
