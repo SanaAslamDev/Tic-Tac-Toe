@@ -57,13 +57,6 @@ function playSound(name) {
 // (put these files in a music/ folder)
 // =============================================
 
-/*const musicTracks = {
-    lofi:  "music/lofi.mp3",
-    retro: "music/retro.mp3",
-    hype:  "music/hype.mp3",
-    calm:  "music/calm.mp3"
-};*/
-
 const bgMusic    = new Audio("sounds/music.mp3");
 bgMusic.loop     = true;
 bgMusic.volume   = 0.4;
@@ -239,7 +232,7 @@ startBtn.addEventListener("click", () => {
     player2Name = n2;
 
     playSound("click");
-    resetBoard();
+    resetBoard()
     showScreen(gameScreen);
 });
 
